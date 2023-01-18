@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="border-t border-gray-300 bg-white">
       <Container>
         {/* TODO: Create footer */}
-        <div className="mx-auto px-4 py-8">
+        <div className="mx-auto py-8">
           <div className="flex flex-col md:flex-row md:justify-between">
             {/* Logo */}
             <div>

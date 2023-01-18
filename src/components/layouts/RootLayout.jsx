@@ -4,7 +4,7 @@ import Header from "../common/Header";
 
 const RootLayout = () => {
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    <div className="flex min-h-screen w-full flex-col pt-16">
       <Header />
       <main className="flex-grow">
         <Outlet />

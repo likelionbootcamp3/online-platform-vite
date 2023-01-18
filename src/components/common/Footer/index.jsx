@@ -1,6 +1,7 @@
 import Container from "../Container";
 import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { FaTiktok, FaFacebookF } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -11,93 +12,94 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row md:justify-between">
             {/* Logo */}
             <div>
-              <img
-                src="https://techit.education/img/techit_by_likelion_logo.svg"
-                alt="techit"
-                className="cursor-pointer"
-              />
+              <Link to="/">
+                <img
+                  src="https://techit.education/img/techit_by_likelion_logo.svg"
+                  alt="techit"
+                  height={38}
+                  width={133}
+                />
+              </Link>
             </div>
 
-            {/* Kinh nghiệm giáo dục */}
-            <div className="mt-8 flex flex-col md:mt-0 md:flex-row">
+            <div className="mt-8 flex flex-col gap-7 md:mt-0 md:flex-row md:gap-20">
+              {/* Education */}
               <div>
-                <h3 className="text-xs text-gray-500">Kinh nghiệm giáo dục</h3>
-                <ul className="mt-4">
-                  <li className="my-3 text-sm font-semibold">
+                <h6 className="text-xs text-gray-500">Kinh nghiệm giáo dục</h6>
+                <ul className="mt-4 flex flex-col gap-2 text-sm font-semibold">
+                  <li>
                     <a href="#">Trường KĐT Tekit</a>
                   </li>
-                  <li className="my-3 text-sm font-semibold">
+                  <li>
                     <a href="#">Trạm khởi động</a>
                   </li>
-                  <li className="my-3 text-sm font-semibold">
+                  <li>
                     <a href="#">Lớp VOD</a>
                   </li>
-                  <li className="my-3 text-sm font-semibold">
+                  <li>
                     <a href="#">Sự kiện</a>
                   </li>
                 </ul>
               </div>
 
-              {/* Giới thiệu */}
-              <div className="mt-4 flex flex-col md:mt-0 md:ml-20">
-                <h3 className="text-xs text-gray-500">Giới thiệu</h3>
-                <div className="mt-4 mb-2">
-                  <a
-                    href="#"
-                    target="_blank"
-                    className="flex items-center text-sm font-semibold"
-                  >
-                    LIKELION
-                  </a>
-                </div>
+              {/* About */}
+              <div>
+                <h6 className="text-xs text-gray-500">Giới thiệu</h6>
+                <ul className="mt-4 flex flex-col gap-2 text-sm font-semibold">
+                  <li>
+                    <a href="#" target="_blank">
+                      LIKELION
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <hr className="mt-5 w-full border-gray-300" />
+          <hr className="my-5 w-full border-gray-300" />
 
-          {/* Media */}
-          <div className="mt-4">
-            <ul className="mb-6 flex">
-              <li className="mr-1 text-sm">
+          <div>
+            {/* Company Media */}
+            <ul className="mb-6 flex items-center gap-2 text-base text-white">
+              <li>
                 <a
                   href="#"
                   target="_blank"
-                  className="inline-block rounded-full bg-black p-2 text-xl text-white"
+                  className="rounded-full bg-black p-2"
                 >
                   <AiOutlineInstagram />
                 </a>
               </li>
-              <li className="mx-1 text-sm">
+              <li>
                 <a
                   href="#"
                   target="_blank"
-                  className="inline-block rounded-full bg-black p-2 text-xl text-white"
+                  className="rounded-full bg-black p-2"
                 >
                   <AiFillYoutube />
                 </a>
               </li>
-              <li className="mx-1 text-sm">
+              <li>
                 <a
                   href="#"
                   target="_blank"
-                  className="inline-block rounded-full bg-black p-2 text-xl text-white"
+                  className="rounded-full bg-black p-2"
                 >
                   <FaTiktok />
                 </a>
               </li>
-              <li className="ml-1 text-sm">
+              <li>
                 <a
                   href="#"
                   target="_blank"
-                  className="inline-block rounded-full bg-black p-2 text-xl text-white"
+                  className="rounded-full bg-black p-2"
                 >
                   <FaFacebookF />
                 </a>
               </li>
             </ul>
 
-            {/* Thông tin */}
+            {/* Company Info */}
             <div className="flex items-center text-xs font-medium">
               <a href="#" target="_blank" className="text-gray-500">
                 Điều khoản sử dụng
@@ -115,9 +117,11 @@ const Footer = () => {
                 Chính sách hoàn tiền
               </a>
             </div>
-            <div className="mt-3">
-              <div className="flex flex-col">
-                <div className="my-0.5 text-xs text-gray-500">
+
+            <div className="mt-3 flex flex-col gap-0.5 text-xs text-gray-500">
+              <div className="flex flex-col gap-0.5 py-0.5 lg:flex-row lg:items-center lg:gap-2">
+                {/* Company name */}
+                <div className="flex items-center">
                   <span>Tên công ty: LikeLion</span>
 
                   <span className="mx-2 inline-block h-2.5 w-px bg-[#737373]"></span>
@@ -129,10 +133,11 @@ const Footer = () => {
                   <span>contact@likelion.net</span>
                 </div>
 
-                <div className="my-0.5 flex text-xs text-gray-500">
+                {/* Company Id */}
+                <div className="flex items-center">
                   <span>Số doanh nghiệp: 264-88-01106</span>
 
-                  <span className="mx-2 inline-block h-auto w-px bg-[#737373]"></span>
+                  <span className="mx-2 inline-block h-2.5 w-px bg-[#737373]"></span>
 
                   <span>
                     Số báo cáo kinh doanh đặt hàng qua thư: 2019-Seoul
@@ -140,14 +145,16 @@ const Footer = () => {
                   </span>
                 </div>
               </div>
-              <div className="mt-0.5 flex flex-col text-xs text-gray-500">
-                <span className="my-0.5">
+
+              <div className="flex flex-col gap-0.5 py-0.5 lg:flex-row lg:items-center lg:gap-2">
+                {/* Company Address */}
+                <span>
                   Địa chỉ: Tầng 16 và 17, D1-dong, Gwanghwamun D Tower, 17
                   Jong-ro 3-gil, Jongno-gu, Seoul
                 </span>
-                <span className="my-0.5">
-                  Copyright © 2022 LikeLion All rights reserved.
-                </span>
+
+                {/* Copyright */}
+                <span>Copyright © 2022 LikeLion All rights reserved.</span>
               </div>
             </div>
           </div>

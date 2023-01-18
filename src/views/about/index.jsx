@@ -1,5 +1,11 @@
+import Media from "./Media";
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <Media />
+    </div>
+  );
 };
 
 export default About;

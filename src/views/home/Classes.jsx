@@ -58,7 +58,7 @@ const videos = [
   },
 ];
 
-const VideoCard = ({ video }) => {
+const ClassCard = ({ video }) => {
   return (
     <li>
       <img src={video.snippet.thumbnail.url} alt="" />
@@ -89,7 +89,7 @@ const Clasess = () => {
 
         <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4">
           {videos.map((item) => (
-            <VideoCard key={item.id} video={item} />
+            <ClassCard key={item.id} video={item} />
           ))}
         </ul>
       </Container>

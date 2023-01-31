@@ -5,3 +5,17 @@
 a {
   display: inline-block;
 }
+
+.swiper-slide {
+  height: auto;
+  @apply w-[80%];
+}
+
+.swiper-button-disabled {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}

@@ -64,17 +64,19 @@ const Clasess = () => {
   return (
     <section>
       <Container>
-        <HeadingBox
-          subheading="all educational experiences"
-          heading="A new education tapped by Tekit"
-          description="Meet all the new education you need for growth."
-        />
+        <div className="py-10">
+          <HeadingBox
+            subheading="all educational experiences"
+            heading="A new education tapped by Tekit"
+            description="Meet all the new education you need for growth."
+          />
 
-        <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 lg:gap-x-6">
-          {videos.map((item) => (
-            <ClassCard key={item.id} video={item} type="home" />
-          ))}
-        </ul>
+          <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 lg:gap-x-6">
+            {videos.map((item) => (
+              <ClassCard key={item.id} video={item} type="home" />
+            ))}
+          </ul>
+        </div>
       </Container>
     </section>
   );

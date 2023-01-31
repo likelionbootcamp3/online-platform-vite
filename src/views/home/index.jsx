@@ -1,4 +1,4 @@
-import Clasess from "./Classes";
+import Clasess from "./ClassGrid";
 
 const Home = () => {
   return (

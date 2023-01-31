@@ -1,5 +1,6 @@
 import ClassCard from "../../components/common/ClassCard";
 import Container from "../../components/common/Container";
+import HeadingBox from "../../components/common/HeadingBox";
 
 const videos = [
   {
@@ -63,13 +64,11 @@ const Clasess = () => {
   return (
     <section>
       <Container>
-        {/* TODO: CREATE CLASSES */}
-        <div>
-          <p className="mb-1 text-sm font-semibold text-yellow-500">
-            TECHIT KDT School
-          </p>
-          <h2 className="text-xl font-bold">Bla bla</h2>
-        </div>
+        <HeadingBox
+          subheading="all educational experiences"
+          heading="A new education tapped by Tekit"
+          description="Meet all the new education you need for growth."
+        />
 
         <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4">
           {videos.map((item) => (

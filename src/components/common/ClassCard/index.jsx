@@ -1,11 +1,17 @@
-const ClassCard = ({ video }) => {
+const ClassCard = ({ video, type }) => {
+  const isHome = type === "home";
+
+  if (isHome) {
+    //
+  }
+
   return (
     <li>
       <img src={video.snippet.thumbnail.url} alt="" />
       <div>
-        <h5 className="mt-4 mb-2 text-base font-semibold">
+        <h3 className="mt-3 text-base font-semibold md:mt-2.5 md:text-xl lg:mt-4">
           {video.snippet.title}
-        </h5>
+        </h3>
         <p className="text-xs font-medium">{video.snippet.description}</p>
         <div className="my-2.5">
           <span className="text-sm font-semibold">

@@ -2,7 +2,7 @@ import ClassCard from "../../components/common/ClassCard";
 import Container from "../../components/common/Container";
 import HeadingBox from "../../components/common/HeadingBox";
 
-const videos = [
+export const videos = [
   {
     id: 1,
     snippet: {
@@ -70,9 +70,9 @@ const Clasess = () => {
           description="Meet all the new education you need for growth."
         />
 
-        <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4">
+        <ul className="mt-4 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-4 lg:gap-x-6">
           {videos.map((item) => (
-            <ClassCard key={item.id} video={item} />
+            <ClassCard key={item.id} video={item} type="home" />
           ))}
         </ul>
       </Container>

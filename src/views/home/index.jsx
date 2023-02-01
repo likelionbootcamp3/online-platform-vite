@@ -3,7 +3,7 @@ import Clasess from "./ClassGrid";
 const Home = () => {
   return (
     <div>
-      <Clasess />
+      <Clasess n={8} />
     </div>
   );
 };

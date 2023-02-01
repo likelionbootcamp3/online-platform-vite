@@ -138,20 +138,22 @@ export const videos = [
   },
 ];
 
-const Clasess = () => {
+const Clasess = ({ n }) => {
   return (
     <section>
       <Container>
-        <div className="pt-10 lg:pt-20">
+        <div className="py-10 lg:py-20">
+          {/* Heading */}
           <HeadingBox
             subheading="all educational experiences"
             heading="A new education tapped by Tekit"
             description="Meet all the new education you need for growth."
           />
 
+          {/* Classes Grid */}
           <ul className="mt-8 grid w-full grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-3 md:gap-x-6 md:gap-y-10 lg:grid-cols-4">
-            {videos.map((item) => (
-              <ClassCard key={item.id} video={item} type="home" />
+            {videos.slice(0, n).map((item) => (
+              <ClassCard key={item.id} video={item} />
             ))}
           </ul>
         </div>

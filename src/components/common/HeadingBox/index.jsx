@@ -1,6 +1,6 @@
 const HeadingBox = ({ subheading, heading, description }) => {
   return (
-    <div className="mb-6 lg:mb-10">
+    <div className="mb-6 max-w-[90%] md:max-w-[65%] lg:mb-10 lg:max-w-[60%]">
       <h2 className="text-sm font-semibold text-amber-600 lg:text-base">
         {subheading}
       </h2>

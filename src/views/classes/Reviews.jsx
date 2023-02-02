@@ -5,6 +5,7 @@ import { Navigation } from "swiper";
 import { breakpoints } from "../../constants";
 import { useState } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import HeadingBox from "../../components/common/HeadingBox";
 
 const reviewData = [
   {
@@ -91,53 +92,69 @@ const ReviewCard = ({ title, description, author }) => {
   );
 };
 
-const Reviews = () => {
+const ReviewsSwiper = () => {
   const [prevEl, setPrevEl] = useState(null);
   const [nextEl, setNextEl] = useState(null);
   return (
-    <section>
-      <Container>
-        <div className="relative py-6">
-          {/* Reviews Swiper */}
-          <Swiper
-            slidesPerView={"auto"}
-            spaceBetween={24}
-            navigation={{ prevEl, nextEl }}
-            modules={[Navigation]}
-            speed={600}
-            breakpoints={{
-              [breakpoints.md]: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              },
-              [breakpoints.lg]: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-              },
-            }}
-          >
-            {reviewData.map((review) => {
-              return (
-                <SwiperSlide key={review.id}>
-                  <ReviewCard {...review} />
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+    <ul className="relative">
+      {/* Reviews Swiper */}
+      <Swiper
+        slidesPerView={"auto"}
+        spaceBetween={24}
+        navigation={{ prevEl, nextEl }}
+        modules={[Navigation]}
+        speed={600}
+        breakpoints={{
+          [breakpoints.md]: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          [breakpoints.lg]: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+        }}
+      >
+        {reviewData.map((review) => {
+          return (
+            <SwiperSlide key={review.id}>
+              <ReviewCard {...review} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
 
-          {/* Swiper button */}
-          <div className="hidden lg:block">
-            <div ref={(node) => setPrevEl(node)}>
-              <div className="absolute top-1/2 left-0 z-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 text-3xl shadow">
-                <BiChevronLeft />
-              </div>
-            </div>
-            <div ref={(node) => setNextEl(node)}>
-              <div className="absolute top-1/2 right-0 z-10 translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 text-3xl shadow">
-                <BiChevronRight />
-              </div>
-            </div>
+      {/* Swiper button */}
+      <div className="hidden lg:block">
+        <div ref={(node) => setPrevEl(node)}>
+          <div className="absolute top-1/2 left-0 z-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 text-3xl shadow">
+            <BiChevronLeft />
           </div>
+        </div>
+        <div ref={(node) => setNextEl(node)}>
+          <div className="absolute top-1/2 right-0 z-10 translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-full bg-white p-2 text-3xl shadow">
+            <BiChevronRight />
+          </div>
+        </div>
+      </div>
+    </ul>
+  );
+};
+
+const Reviews = () => {
+  return (
+    <section className="bg-[#f5f5f5]">
+      <Container>
+        <div className="py-20">
+          {/* Heading */}
+          <HeadingBox
+            subheading={"Training goal"}
+            heading={"Stories of people who reached their goals first"}
+            description={
+              "Taking one step towards my dream is very difficult. If you are hesitant to start, meet the stories of people who first achieved their dreams at Tekit KDT."
+            }
+          />
+          <ReviewsSwiper />
         </div>
       </Container>
     </section>
